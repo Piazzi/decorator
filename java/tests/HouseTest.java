@@ -27,4 +27,16 @@ class HouseTest {
         House house = new Bathtub(new TV(new SmallHouse(1000.0f)));
         assertEquals(1250.0f, house.getValue());
     }
+
+    @Test
+    void shouldReturnValue(){
+        House house = new SmallHouse(1000.0f);
+        assertEquals(1000.0f, house.getValue());
+    }
+
+    @Test
+    void shouldReturnStructure(){
+        House house = new SmallHouse(1000.0f);
+        assertEquals("Small house with nothing inside", house.getStructureName());
+    }
 }
