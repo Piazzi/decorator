@@ -4,8 +4,18 @@
 
 # Code
 
-Simple project representing the decorator design pattern. 
+Simple project representing the decorator design pattern. For this one i used the design pattern to create a house which can be decorated with furnatures.
 
+# Resume
+
+The ability to do this: 
+```
+ @Test
+    void shouldReturnHouseWithBathtubAndTVValue(){
+        House house = new Bathtub(new TV(new SmallHouse(1000.0f)));
+        assertEquals(1250.0f, house.getValue());
+    }
+```
 # Definition
 
 In object-oriented programming, the decorator pattern is a design pattern that allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class. The decorator pattern is often useful for adhering to the Single Responsibility Principle, as it allows functionality to be divided between classes with unique areas of concern. Decorator use can be more efficient than subclassing, because an object's behavior can be augmented without defining an entirely new object.
